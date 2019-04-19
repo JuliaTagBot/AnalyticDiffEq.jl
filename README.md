@@ -32,3 +32,7 @@ P4(x) = (1/8)*(35x^4 - 30x^2 + 3)
 
 The next steps are to integrate this basic feature into the `solve` interface in DifferentialEquations.jl and
 fully leverage the special cases for greater precision, accuracy, and speed.
+
+As this is a proof of concept and a work in progress, `AnalyticDiffEq.jl` can only handle Laguerre, Hermite, and Legendre equations up to order (a hardcoded) order 12, and in the case of Laguerre with `α = 0`.
+
+Extending the use cases to classical orthogonal polynomials will eventually be implemented through [OrthogonalPolynomials.jl](https://github.com/miguelraz/OrthogonalPolynomials.jl) or [ApproxFun.jl](https://github.com/JuliaApproximation/ApproxFun.jl).
